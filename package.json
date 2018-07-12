@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/brunob182/js-with-tdd/issues"
   },
-  "homepage": "https://github.com/brunob182/js-with-tdd#readme"
+  "homepage": "https://github.com/brunob182/js-with-tdd#readme",
+  "dependencies": {}
 }
