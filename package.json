@@ -4,6 +4,8 @@
   "description": "JS with TDD Course",
   "main": "index.js",
   "scripts": {
+    "build": "./node_modules/.bin/webpack --colors --progress",
+    "watch": "npm run build -- --watch",
     "lint": "./node_modules/.bin/eslint src/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,9 +31,14 @@
   "homepage": "https://github.com/brunob182/js-with-tdd#readme",
   "dependencies": {},
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
-    "husky": "^0.14.3"
+    "husky": "^0.14.3",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.0.8"
   }
 }
