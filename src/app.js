@@ -7,4 +7,5 @@
   }
 
   myModule.init();
+  myModule.init();
 })();
