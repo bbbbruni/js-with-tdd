@@ -1,10 +1,12 @@
 const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const nodeENV = process.env.NODE_ENV || 'production';
 
 module.exports = {
-  mode: 'production',
+  mode: nodeENV,
+  devtool: 'source-map',
   entry: {
-    path: './src/app.js',
+    path: './app/app.js',
   },
   output: {
     path: path.resolve(__dirname, 'public/assets'),
@@ -24,6 +26,28 @@ module.exports = {
           }
         }
       },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
+      },
     ]
   },
   optimization: {
@@ -33,5 +57,11 @@ module.exports = {
         sourceMap: true
       }),
     ],
-  }
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, './app'),
+    publicPath: path.resolve(__dirname, '/public/'),
+    port: 8080,
+    open: true
+  },
 };

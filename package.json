@@ -4,9 +4,10 @@
   "description": "JS with TDD Course",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/webpack --colors --progress",
-    "watch": "npm run build -- --watch",
-    "lint": "./node_modules/.bin/eslint src/*.js",
+    "build": "./node_modules/.bin/webpack --color --progress",
+    "watch": "npm run build -- --watch --env.development",
+    "server": "./node_modules/.bin/webpack-dev-server --env.development --color --progress --inline",
+    "lint": "./node_modules/.bin/eslint app/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
@@ -34,12 +35,18 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.13.0",
+    "file-loader": "^1.1.11",
     "husky": "^0.14.3",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.16.1",
-    "webpack-cli": "^3.0.8"
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   }
 }
