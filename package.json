@@ -7,9 +7,9 @@
     "build": "./node_modules/.bin/webpack --color --progress",
     "watch": "npm run build -- --watch --env.development",
     "server": "./node_modules/.bin/webpack-dev-server --env.development --color --progress --inline",
-    "lint": "./node_modules/.bin/eslint app/*.js",
-    "test": "./node_modules/.bin/mocha app/tests/**.spec.js",
-    "test:tdd": "./node_modules/.bin/mocha app/tests/**.spec.js --watch"
+    "lint": "./node_modules/.bin/eslint app/**/*.js",
+    "test": "./node_modules/.bin/mocha app/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha app/**/*.spec.js --require babel-register --watch"
   },
   "husky": {
     "hooks": {
@@ -36,6 +36,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "css-loader": "^1.0.0",
     "eslint": "^4.19.1",
