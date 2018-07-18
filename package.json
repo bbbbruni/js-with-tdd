@@ -8,7 +8,8 @@
     "watch": "npm run build -- --watch --env.development",
     "server": "./node_modules/.bin/webpack-dev-server --env.development --color --progress --inline",
     "lint": "./node_modules/.bin/eslint app/*.js",
-    "test": "./node_modules/.bin/mocha app/tests/**.spec.js"
+    "test": "./node_modules/.bin/mocha app/tests/**.spec.js",
+    "test:tdd": "./node_modules/.bin/mocha app/tests/**.spec.js --watch"
   },
   "husky": {
     "hooks": {
