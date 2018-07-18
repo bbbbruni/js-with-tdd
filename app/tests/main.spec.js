@@ -19,16 +19,3 @@ describe.skip('Main', function() {
     });
   });
 });
-
-// EXECUTION TIME
-
-// before
-// beforeEach
-// test 1
-//     ✓ Test 1
-// afterEach
-// beforeEach
-// test 2
-//     ✓ Test 2
-// afterEach
-// after
