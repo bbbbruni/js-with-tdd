@@ -4,8 +4,9 @@
 * - it() is what will run on a test
 */
 
-describe('Main', function() {
+// TODO: Create an README
 
+describe('Main', function() {
   describe('Method A', function() {
     context('Case 1', function() {
       it('Shoud happen this lorem ipsum', function() {
@@ -28,6 +29,18 @@ describe('Main', function() {
         // Need something to happen
         // Receive data and make it valid
         // Wait a return true or false to pass or not the test
+      });
+    });
+
+    // Focus only on context block of a test with .only
+    context.only('Case 3', function() {
+      it('should return that when lorem ispsum', function() {
+      });
+    });
+
+    // Skip context block of a test with .skip on .it()
+    context('Case 4', function() {
+      it.skip('should return that when lorem ispsum', function() {
       });
     });
   });
