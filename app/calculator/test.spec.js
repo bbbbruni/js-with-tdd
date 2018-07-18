@@ -53,6 +53,6 @@ describe('Calculator', () => {
 
     it('should return `It is not possible divide number by 0` when divide by 0', () => {
       expect(div(4, 0)).to.be.equal('It is not possible divide number by 0');
- });
+    });
   });
 });
