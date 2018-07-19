@@ -4,7 +4,7 @@
   "description": "JS with TDD Course",
   "main": "index.js",
   "scripts": {
-    "prepush": "npm lint && npm test:coverage",
+    "prepush": "npm run lint && npm run test:coverage",
     "build": "./node_modules/.bin/webpack --color --progress",
     "watch": "npm run build -- --watch --env.development",
     "server": "./node_modules/.bin/webpack-dev-server --env.development --color --progress --inline",
