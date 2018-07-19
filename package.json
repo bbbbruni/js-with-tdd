@@ -14,9 +14,9 @@
     "prepush": "npm run test:coverage"
   },
   "nyc": {
-    "check-coverage": true,
     "functions": 80,
     "lines": 80,
+    "check-coverage": true,
     "reporter": ["text", "html"],
     "exclude": ["app/**/*.spec.js"]
   },
