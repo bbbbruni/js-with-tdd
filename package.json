@@ -17,8 +17,13 @@
     "functions": 80,
     "lines": 80,
     "check-coverage": true,
-    "reporter": ["text", "html"],
-    "exclude": ["app/**/*.spec.js"]
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "app/**/*.spec.js"
+    ]
   },
   "husky": {
     "hooks": {
@@ -56,9 +61,13 @@
     "file-loader": "^1.1.11",
     "husky": "^0.14.3",
     "mocha": "^5.2.0",
+    "node-fetch": "^2.1.2",
     "node-sass": "^4.9.2",
     "nyc": "^12.0.2",
     "sass-loader": "^7.0.3",
+    "sinon": "2.1.0",
+    "sinon-chai": "2.9.0",
+    "sinon-stub-promise": "4.0.0",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.16.1",
