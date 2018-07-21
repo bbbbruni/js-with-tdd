@@ -1,11 +1,9 @@
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import sinonStubPromise from 'sinon-stub-promise';
 import { getAlbum, getAlbums, getAlbumTracks } from '../albums';
 
 chai.use(sinonChai);
-sinonStubPromise(sinon);
 global.fetch = require('node-fetch');
 
 describe('Album', () => {
