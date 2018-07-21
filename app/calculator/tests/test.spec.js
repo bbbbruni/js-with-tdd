@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { sum, sub, mult, div } from './main';
+import { sum, sub, mult, div } from '../main';
 
 describe('Calculator', () => {
 
