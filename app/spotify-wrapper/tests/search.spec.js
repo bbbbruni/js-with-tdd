@@ -20,7 +20,7 @@ describe('Search', () => {
     // Use and handle fetch to work with node-fetch
     fetchedStub = sinon.stub(global, 'fetch');
     // Sinon handle promises return
-    promise = fetchedStub.resolves({ json: () => ({ album: 'name' }) });
+    promise = fetchedStub.resolves({ json: () => ({}) });
   });
 
   afterEach(() => {

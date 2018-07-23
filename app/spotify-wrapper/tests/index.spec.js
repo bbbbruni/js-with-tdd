@@ -38,7 +38,7 @@ describe('SpotifyWrapper library', () => {
 
     beforeEach(() => {
       fetchedStub = sinon.stub(global, 'fetch');
-      promise = fetchedStub.resolves({ json: () => ({ album: 'name' }) });
+      promise = fetchedStub.resolves({ json: () => ({}) });
     });
 
     afterEach(() => {
