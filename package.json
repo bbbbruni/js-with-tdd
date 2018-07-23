@@ -6,7 +6,7 @@
   "scripts": {
     "clear": "rimraf lib",
     "build": "./node_modules/.bin/webpack --color --progress",
-    "build:babel": "npm run clear && ./node_modules/.bin/babel --out-dir lib app/spotify-wrapper --ignore app/**/tests",
+    "build:babel": "npm run clear && ./node_modules/.bin/babel --out-dir lib app/spotify-wrapper --ignore app/spotify-wrapper/tests",
     "build:babel:watch": "npm run build:babel -- --watch",
     "watch": "npm run build -- --watch --env.development",
     "server": "./node_modules/.bin/webpack-dev-server --env.development --color --progress --inline",
