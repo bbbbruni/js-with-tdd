@@ -1,13 +1,10 @@
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import sinonStubPromise from 'sinon-stub-promise';
 import SpotifyWrapper from '../index';
 
 chai.use(sinonChai);
-sinonStubPromise(sinon);
 global.fetch = require('node-fetch');
-sinonStubPromise(sinon);
 
 describe('Search', () => {
   let spotify;
@@ -23,7 +20,7 @@ describe('Search', () => {
     // Use and handle fetch to work with node-fetch
     fetchedStub = sinon.stub(global, 'fetch');
     // Sinon handle promises return
-    promise = fetchedStub.returnsPromise();
+    promise = fetchedStub.resolves({ json: () => ({ album: 'name' }) });
   });
 
   afterEach(() => {

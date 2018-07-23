@@ -2,10 +2,8 @@ import chai, { expect } from 'chai';
 import SpotifyWrapper from '../index';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import sinonStubPromise from 'sinon-stub-promise';
 
 chai.use(sinonChai);
-sinonStubPromise(sinon);
 global.fetch = require('node-fetch');
 
 describe('SpotifyWrapper library', () => {
@@ -40,7 +38,7 @@ describe('SpotifyWrapper library', () => {
 
     beforeEach(() => {
       fetchedStub = sinon.stub(global, 'fetch');
-      promise = fetchedStub.returnsPromise();
+      promise = fetchedStub.resolves({ json: () => ({ album: 'name' }) });
     });
 
     afterEach(() => {
